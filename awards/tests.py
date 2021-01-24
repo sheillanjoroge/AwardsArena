@@ -20,14 +20,14 @@ class Test_Profile(TestCase):
     def test_user(self):
         users = list(User.objects.all())
 
-    #     self.assertEqual(len(users), 1)
-    #     self.assertEqual(users[0].username, 'kishy')
-    #     self.assertEqual(users[0].email, 'kishy.gikish@gmail.com')
+        self.assertEqual(len(users), 1)
+        self.assertEqual(users[0].username, 'kishy')
+        self.assertEqual(users[0].email, 'kishy.gikish@gmail.com')
 
 
-    # def test_profile_create(self):
-    #     self.assertNotEqual(self.user.profile.profile_image, None )
-    #     self.assertEqual(self.user.profile.profile_image.name, 'profiles/file.jpg')
+    def test_profile_create(self):
+        self.assertNotEqual(self.user.profile.profile_image, None )
+        self.assertEqual(self.user.profile.profile_image.name, 'profiles/file.jpg')
         
     def tearDown(self):
         directory_profiles = os.getcwd() + '\media\profiles'
