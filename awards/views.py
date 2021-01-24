@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.http import JsonResponse
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login, logout, authenticate, get_user_model
-from rest_framework.response import Response
-from rest_framework.views import APIView
-import json
-import math
+# from django.contrib.auth.decorators import login_required
+# from django.contrib.auth import login, logout, authenticate, get_user_model
+# from rest_framework.response import Response
+# from rest_framework.views import APIView
+# import json
+# import math
 
 from .serializers import UsersSerialized, ProjectsSerialized
 
