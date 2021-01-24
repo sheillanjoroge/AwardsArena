@@ -1,6 +1,6 @@
 # AwardsArena
 
-Platform for submitting projects and other like minded fellows can rate and give them feedback on the same.
+This is a Platform for submitting projects and other like minded fellows can rate and give them feedback on the same.
 
 #### By **Sheilla Njoroge**
 
