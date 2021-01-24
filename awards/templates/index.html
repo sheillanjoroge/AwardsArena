@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block styles %}
+<!-- Styles stuff -->
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block content %}
+<div class="content">
+    <div class="items">
+        {% for post in posts %}
+        <div class="item">
+            <div class="image-section">
+                <a href="/post/{{post.id}}">
+                    <img src="{% static 'images/site.jpg' %}" alt="">
+                </a>
+                
+            </div>
+            <div class="description-section">
+                <div class=" mb-3">
+                    {{ post.post_description }}
+                </div>
+                <div class="">
+                    
+                </div>
+                <div class="item-imgs">
+                    <div class="item-img">
+                        <img src="{% static 'images/site.jpg' %}" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<!-- Scripts stuff -->
+
+{% endblock %}
