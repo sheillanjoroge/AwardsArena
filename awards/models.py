@@ -8,13 +8,13 @@ User =  get_user_model()
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_image = models.ImageField(upload_to = 'profiles/')
-
+    profile_image = md.CloudinaryField('image', null=True, blank=True)
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post_image = models.ImageField(upload_to = 'posts/')
     post_description = models.CharField(max_length=200)
     upload_date = models.DateField(auto_now_add=True)
-
+    post_image = md.CloudinaryField('image', null=True, blank=True)
     @classmethod
     def get_all_posts(cls):
         return Post.objects.all()

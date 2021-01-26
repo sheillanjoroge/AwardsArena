@@ -169,3 +169,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
+
+
+cloudinary.config(
+  cloud_name = "awardsarena",
+  api_key = "328725128876421",
+  api_secret = "ZoxJhdNAoH_0TOfy84JX9ovWqhM"
+)

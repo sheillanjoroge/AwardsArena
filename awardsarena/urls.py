@@ -7,6 +7,7 @@ urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^register', registerPage, name='register'),
     url(r'^login', loginPage, name='login'),
+    url(r'^logout/$', views.logout, {"next_page": '/'}),
     url('', include('awards.urls') ), 
     url(r'^profile', include('awards.urls')),
     url(r'^upload', include('awards.urls')),
